@@ -1,0 +1,14 @@
+# Example of a badly formatted YAML file for testing purposes
+pipeline:
+  stages:
+    - name: "build stage with an excessively long name that exceeds the maximum line length limit set by yamllint"
+      steps:
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+        - name: Run tests
+            run: pytest    # This line is incorrectly indented
+    - name: Deploy stage
+      steps:
+        - name: Deploy to production
+          run: |
+            scp -r ./build user@server:/path/to/deploy 
