@@ -17,4 +17,4 @@ jobs:
           reporter: github-pr-review
           level: error
           yamllint_flags: |
-            -d {rules:{line-length:{max: 120}}} .
+            -d {rules:{line-length:{max:80}}} .
