@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -27,4 +27,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: error
-          yamllint_flags: '-d "{extends: default, rules: {line-length: {max: 120}}}" .github/**/*.yaml .github/**/*.yml .github/**/*.yamllint'
+          yamllint_flags: '-d "{extends: default, rules: {line-length: {max: 120}}}" .'
