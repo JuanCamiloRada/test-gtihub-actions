@@ -1,7 +1,6 @@
 name: Lint YAML
 
-on:
-  workflow_dispatch:
+on: [pull_request]
 
 jobs:
   yamllint:
@@ -27,4 +26,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: error
-          yamllint_flags: "-d '{extends: default, rules: {line-length: {max: 120}}}' ."
+          yamllint_flags: '-d "{rules: {line-length: {max: 120}}}" .'
