@@ -16,4 +16,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           level: error
-          yamllint_flags: '-d {extends: default, rules: {truthy: disable}} .'
+          yamllint_flags: |
+            -d {extends: default, rules: {truthy: disable}} .
