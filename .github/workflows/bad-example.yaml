@@ -1,0 +1,7 @@
+pipeline:
+  stages:
+    - name: "build stage with an excessively long name that exceeds the maximum line length limit set by yamllint asdasd asdasd asd asdas das dsad "
+      steps:
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+
